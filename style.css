@@ -7,11 +7,131 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   height: 100vh;
-  overflow: hidden;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 55% 45%;
   font-family: 'Lato', sans-serif;
+  gap: 3rem;
+  overflow: hidden;
+  background-color: whitesmoke;
 }
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+}
+
+/* ---------------------------------------------Header */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------Description */
+
+.description {
+  margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description .title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.description .subtitle {
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.description-text {
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+/* --------------------------------------------------Footer */
+
+footer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: var(--yellow);
+  border-top-right-radius: 10vh;
+}
+
+footer ul {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer li {
+  width: 18%;
+  background-color: var(--blue);
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* --------------------------------------------------Aside */
+aside {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.character {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.character-name {
+  transform: rotate(-90deg);
+  transform-origin: left;
+  margin: 0;
+}
+
+.vertical-stripe {
+  background-color: var(--yellow);
+}
+
+aside img {
+  position: absolute;
+}
+
+/* --------------------------------------------------Loading */
 
 .loader {
   position: absolute;
@@ -26,7 +146,7 @@ body {
   background-color: whitesmoke;
 
   animation-name: loader;
-  animation-duration: 5s;
+  animation-duration: 500ms;
   animation-fill-mode: forwards;
 }
 
