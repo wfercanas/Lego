@@ -153,6 +153,24 @@ aside {
   transform: rotate(-90deg);
   transform-origin: left;
   margin: 0;
+  opacity: 0;
+  color: darkslategray;
+
+  animation-name: character-name;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes character-name {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .vertical-stripe {
@@ -161,6 +179,27 @@ aside {
 
 aside img {
   position: absolute;
+  height: 70%;
+  top: 25%;
+  left: 20%;
+  opacity: 0;
+
+  animation-name: harry;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes harry {
+  0% {
+    transform: translateX(100px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* --------------------------------------------------Loading */
@@ -178,7 +217,7 @@ aside img {
   background-color: whitesmoke;
 
   animation-name: loader;
-  animation-duration: 500ms;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
