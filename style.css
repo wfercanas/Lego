@@ -41,7 +41,7 @@ header {
 @keyframes header {
   0% {
     transform: translateY(-50px);
-    opacity: 0.5;
+    opacity: 0.2;
   }
   100% {
     transform: translateY(0);
@@ -73,6 +73,22 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  animation-name: description;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes description {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .description .title {
