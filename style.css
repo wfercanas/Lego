@@ -20,7 +20,6 @@ body {
   max-width: 1400px;
   display: grid;
   grid-template-columns: 55% 45%;
-  gap: 3rem;
 }
 
 main {
@@ -181,6 +180,7 @@ footer img:hover {
 /* --------------------------------------------------Aside */
 aside {
   position: relative;
+  min-width: 400px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
