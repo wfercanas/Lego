@@ -211,6 +211,23 @@ aside {
 
 .vertical-stripe {
   background-color: var(--yellow);
+  opacity: 0;
+
+  animation-name: stripe;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes stripe {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 aside img {
