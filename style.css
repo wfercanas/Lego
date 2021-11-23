@@ -118,8 +118,26 @@ footer {
   position: relative;
   height: 100%;
   width: 100%;
+  opacity: 0;
   background-color: var(--yellow);
   border-top-right-radius: 10vh;
+
+  animation-name: footer;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes footer {
+  0% {
+    transform: translateY(100px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 footer ul {
@@ -135,9 +153,23 @@ footer ul {
 }
 
 footer li {
+  position: relative;
   width: 18%;
   background-color: var(--blue);
   border-radius: 1rem 1rem 0 0;
+}
+
+footer img {
+  position: absolute;
+  width: 120%;
+  left: -10px;
+  top: -50px;
+  transition: transform 500ms ease-in;
+}
+
+footer img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 /* --------------------------------------------------Aside */
