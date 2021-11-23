@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/lego.png" type="image/png" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
     <title>Lego</title>
   </head>
   <body>
@@ -38,13 +39,13 @@
       <footer>
         <ul>
           <li class="character-item">
-            <img src="./assets/batman.webp" alt="" />
+            <img id="batman" src="./assets/batman.webp" alt="" />
           </li>
           <li class="character-item">
-            <img src="./assets/robin.png" alt="" />
+            <img id="robin" src="./assets/robin.png" alt="" />
           </li>
           <li class="character-item">
-            <img src="./assets/spiderman.png" alt="" />
+            <img id="spiderman" src="./assets/spiderman.png" alt="" />
           </li>
         </ul>
       </footer>
@@ -62,6 +63,12 @@
       <div class="loader-item"></div>
       <div class="loader-item"></div>
       <div class="loader-item"></div>
+    </div>
+
+    <div class="modal hidden">
+      <div class="modal-content">
+        <p class="modal-close">X</p>
+      </div>
     </div>
   </body>
 </html>
