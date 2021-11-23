@@ -347,8 +347,7 @@ aside img {
 }
 
 .modal-content {
-  width: 400px;
-  height: 300px;
+  width: 450px;
   background-color: whitesmoke;
 }
 
@@ -356,5 +355,76 @@ aside img {
   text-align: right;
   margin: 1rem;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-slider {
+  width: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  position: relative;
+  width: 350px;
+  height: 200px;
+}
+
+.card {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 400ms ease;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  background-color: var(--yellow);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+#radio-1:checked ~ .cards #card-1,
+#radio-2:checked ~ .cards #card-2,
+#radio-3:checked ~ .cards #card-3 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+#radio-1:checked ~ .cards #card-2,
+#radio-2:checked ~ .cards #card-3,
+#radio-3:checked ~ .cards #card-1 {
+  transform: translateX(40%) scale(0.8);
+  opacity: 0.5;
+}
+
+#radio-1:checked ~ .cards #card-3,
+#radio-2:checked ~ .cards #card-1,
+#radio-3:checked ~ .cards #card-2 {
+  transform: translateX(-40%) scale(0.8);
+  opacity: 0.5;
+}
+
+button {
+  display: block;
+  margin: 2rem auto 1rem;
+  padding: 0.5rem 2rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--red);
+  color: whitesmoke;
   cursor: pointer;
 }
