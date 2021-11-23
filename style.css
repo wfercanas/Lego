@@ -8,13 +8,19 @@
 
 body {
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 55% 45%;
   font-family: 'Lato', sans-serif;
-  gap: 3rem;
   overflow: hidden;
   background-color: whitesmoke;
+}
+
+.main-container {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 3rem;
 }
 
 main {
@@ -29,7 +35,7 @@ main {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 4rem;
   opacity: 0;
 
